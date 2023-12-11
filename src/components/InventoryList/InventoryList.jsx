@@ -7,6 +7,12 @@ const InventoryList = (props) => {
           <li key={item._id}>
             <p>{item.name}</p>
             <p>Cost: {item.cost}</p>
+
+          {props.handleAddItem
+            ? <button onClick={() => props.handleAddItem(item)}>Add Item</button>
+            : <button>Remove Item</button>
+          }
+
           </li>
         ))}
       </ul>
