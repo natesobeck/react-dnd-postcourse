@@ -10,7 +10,7 @@ const InventoryList = (props) => {
 
           {props.handleAddItem
             ? <button onClick={() => props.handleAddItem(item)}>Add Item</button>
-            : <button>Remove Item</button>
+            : <button onClick={() => props.handleRemoveItem(item)}>Remove Item</button>
           }
 
           </li>
