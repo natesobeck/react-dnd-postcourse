@@ -4,3 +4,8 @@ export async function getMonsterList() {
   const res = await fetch(`${BASE_URL}/api/monsters`)
   return res.json()
 }
+
+export async function getMonster(monsterId) {
+  const res = await fetch(`${BASE_URL}/api/monsters/${monsterId}`)
+  return res.json()
+}
