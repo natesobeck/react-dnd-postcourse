@@ -19,9 +19,9 @@ const Shop = () => {
     setShopInventory(shopInventory.filter(e => e._id !== item._id))
   }
 
-  const handleRemoveItem = item => {
-    setUserInventory([userInventory.filter(e => e._id !== item._id)])
+  const handleRemoveItem = (item) => {
     setShopInventory([item, ...shopInventory])
+    setUserInventory(userInventory.filter(e => e._id !== item._id))
   }
 
   return ( 
